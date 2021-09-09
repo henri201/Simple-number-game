@@ -9,15 +9,17 @@ const displayMessage = function (message) {
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
 
-  /////////////////////////// when there is no input
+  // when there is no input
   if (!guess) {
     // document.querySelector('.message').textContent = 'no number!';
     displayMessage('No number!');
-    ////////////////////////////when th player wins
+    
+   //when the player wins
   } else if (guess === secretNumber) {
     displayMessage('Correct number!');
     document.querySelector('.number').textContent = secretNumber;
-    //////////////////////////////Changing CSS color and size of an element
+    
+   //Changing CSS color and size of an element
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '30rem';
     if (score > highscore) {
@@ -59,6 +61,7 @@ document.querySelector('.check').addEventListener('click', function () {
     }
   } */
 });
+
 // reset the game, while keeping the highscore
 document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('body').style.backgroundColor = '#222';
